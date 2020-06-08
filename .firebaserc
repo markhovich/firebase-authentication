@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "test-auth-57409": {
+      "hosting": {
+        "firebase-auth": [
+          "test-auth-57409"
+        ]
+      }
+    }
+  }
+}
