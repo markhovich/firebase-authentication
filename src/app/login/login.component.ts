@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
 
     this.as.login(values.email, values.password).subscribe(
       res => {
-        console.log(res);
         this.router.navigate(['/posts']);
       }, err => {
         console.error(err);
