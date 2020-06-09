@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
     }
 
     const values = this.loginForm.value;
-    console.log(values)
 
     this.as.login(values.email, values.password).subscribe(
       res => {

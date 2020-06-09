@@ -11,6 +11,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { SignupComponent } from './signup/signup.component';
+import { AuthGuard } from './_helpers/guard';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { SignupComponent } from './signup/signup.component';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,9 +1,9 @@
 <header>
     <h1>Firebase Authentication Test</h1>
 
-    <div *ngIf="authService.user | async" class="panel col-md-3">
+    <div *ngIf="authService.userData | async" class="panel col-md-3">
         <div class="pb-2">
-            Bonjour {{ (authService.user | async)?.email }}<br>
+            Bonjour {{ (authService.userData | async)?.email }}<br>
         </div>
         
         <button class="btn btn-primary" (click)="logout()">Se déconnecter</button>

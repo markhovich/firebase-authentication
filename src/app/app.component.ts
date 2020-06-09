@@ -10,8 +10,7 @@ import { User } from './_model/user';
 })
 export class AppComponent {
   title = 'firebase-auth';
-
-
+  
   constructor(public authService: AuthService, private router: Router){
   }
   
