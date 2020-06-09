@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from './_services/auth/auth.service';
+import { Router } from '@angular/router';
+import { User } from './_model/user';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +11,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'firebase-auth';
 
+
+  constructor(public authService: AuthService, private router: Router){
+  }
   
+  logout(){
+    this.authService.logout().subscribe(
+      res => {
+        console.log(res);
+        this.router.navigate(['/login']);
+      }, err => {
+        console.error(err);
+      }
+    );
+  }
 }

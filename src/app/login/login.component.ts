@@ -42,8 +42,6 @@ export class LoginComponent implements OnInit {
       }, err => {
         console.error(err);
         this.error = 'Email et/ou mot de passe incorrects';
-        console.error(this.error);
-
       }
     );
 

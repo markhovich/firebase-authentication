@@ -9,12 +9,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsComponent } from './posts/posts.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PostsComponent
+    PostsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +25,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],

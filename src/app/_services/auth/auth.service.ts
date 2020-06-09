@@ -8,21 +8,27 @@ import { Observable, from } from 'rxjs';
 })
 export class AuthService {
 
-  user: User;
+  user: Observable<firebase.User>;
 
   constructor(private afAuth: AngularFireAuth) { 
-    
+    this.user = this.afAuth.authState;
   }
 
   login(email: string, password: string): Observable<any>{
-    var observable =  from(
+    return from(
       this.afAuth.signInWithEmailAndPassword(email, password)
       );
-
-    return observable;
   }
 
-  logout(){
-    this.afAuth.signOut();
+  logout(): Observable<any>{
+    return from(
+      this.afAuth.signOut()
+    );
+  }
+
+  signup(email: string, password: string): Observable<any>{
+    return from(
+      this.afAuth.createUserWithEmailAndPassword(email, password)
+    );
   }
 }

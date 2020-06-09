@@ -19,5 +19,24 @@ header{
 }
 
 h1{
-    font-family: Arial;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form{
+    //border: 1px solid rgb(81, 143, 236);
+    background-color: rgb(253, 253, 253);
+    padding: 2.5rem;
+}
+
+.btn, .form-control{
+    border-radius: 0rem;
+}
+
+.form-control, .form-control:focus{
+    border: none;
+    box-shadow: none;
+}
+
+.form-input{
+    border: 1px solid rgb(211, 211, 211);
 }
