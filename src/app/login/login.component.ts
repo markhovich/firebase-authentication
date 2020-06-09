@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
       email: ['', Validators.required],
       password: ['', Validators.required]
     })
+    
   }
 
   get f(){ return this.loginForm.controls};
@@ -43,5 +44,24 @@ export class LoginComponent implements OnInit {
       }
     );
 
+  }
+
+  loginWithFacebook(){
+    this.as.loginWithFacebook().subscribe(
+      res => {
+        console.log(res);
+        this.router.navigate(['/posts']);
+      }, err => {
+        console.error(err);
+      }
+    );
+  }
+
+  loginWithGoogle(){
+    this.as.loginWithGoogle();
+  }
+
+  loginWithGithub(){
+    this.as.loginWithGithub();
   }
 }
