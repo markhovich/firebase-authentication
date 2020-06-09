@@ -1,7 +1,12 @@
 <header>
     <h1>Firebase Authentification avec Angular 9</h1>
-    <div class="logo-firebase">
-        <img src="./assets/firebase.png" alt="">
+    <div class="d-flex justify-content-center">
+        <div class="logo-container mr-2">
+            <img src="./assets/firebase.png" alt="">
+        </div>
+        <div class="logo-container ml-2">
+            <img src="./assets/angular.png" alt="">
+        </div>
     </div>
 
     <div *ngIf="authService.userData | async" class="panel col-md-3">

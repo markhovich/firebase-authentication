@@ -3,6 +3,10 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./assets/Ubuntu-Regular.ttf") format("ttf");
+   }
 
 body{
     background-image: url("./assets/back2.jpg");
@@ -18,7 +22,7 @@ header{
 }
 
 h1{
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Ubuntu", 'Trebuchet MS', sans-serif;
 }
 
 form{
